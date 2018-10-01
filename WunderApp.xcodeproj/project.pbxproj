@@ -1,0 +1,693 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7DC80186BAE1583C775335D3 /* Pods_WunderApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECE53443C5F2CB54EA794F08 /* Pods_WunderApp.framework */; };
+		D59A87B02162AB1100D537DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59A87AF2162AB1100D537DD /* AppDelegate.swift */; };
+		D59A87B72162AB1500D537DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D59A87B62162AB1500D537DD /* Assets.xcassets */; };
+		D59A87BA2162AB1500D537DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D59A87B82162AB1500D537DD /* LaunchScreen.storyboard */; };
+		D59A87C52162AB1500D537DD /* WunderAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59A87C42162AB1500D537DD /* WunderAppTests.swift */; };
+		D59A87D42162AC2300D537DD /* CarTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59A87CF2162AC2200D537DD /* CarTableCell.swift */; };
+		D59A87D52162AC2300D537DD /* CarAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59A87D02162AC2300D537DD /* CarAnnotation.swift */; };
+		D59A87D62162AC2300D537DD /* CarsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59A87D12162AC2300D537DD /* CarsViewController.swift */; };
+		D59A87D72162AC2300D537DD /* CarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59A87D22162AC2300D537DD /* CarModel.swift */; };
+		D59A87D82162AC2300D537DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D59A87D32162AC2300D537DD /* Main.storyboard */; };
+		D59A87E22162ACCA00D537DD /* StringExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59A87DA2162ACCA00D537DD /* StringExt.swift */; };
+		D59A87E32162ACCA00D537DD /* ResponseExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59A87DB2162ACCA00D537DD /* ResponseExt.swift */; };
+		D59A87FE2162AD1500D537DD /* TargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59A87F82162AD1500D537DD /* TargetType.swift */; };
+		D59A87FF2162AD1500D537DD /* Rest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59A87F92162AD1500D537DD /* Rest.swift */; };
+		D59A88002162AD1500D537DD /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59A87FA2162AD1500D537DD /* Config.swift */; };
+		D59A88012162AD1500D537DD /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59A87FB2162AD1500D537DD /* Router.swift */; };
+		D59A88022162AD1500D537DD /* CarsTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59A87FC2162AD1500D537DD /* CarsTarget.swift */; };
+		D59A88042162BA8900D537DD /* CarsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59A88032162BA8900D537DD /* CarsViewModel.swift */; };
+		D59A88062162BAFB00D537DD /* CarsViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59A88052162BAFB00D537DD /* CarsViewModelProtocol.swift */; };
+		E803E5F5FF58BD2ECB70AD8E /* Pods_WunderAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55B4C8F818C7A24D5CFE23E4 /* Pods_WunderAppTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D59A87C12162AB1500D537DD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D59A87A42162AB1100D537DD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D59A87AB2162AB1100D537DD;
+			remoteInfo = WunderApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		188419FA2814319B72F6F9B8 /* Pods-WunderAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WunderAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WunderAppTests/Pods-WunderAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		55B4C8F818C7A24D5CFE23E4 /* Pods_WunderAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WunderAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		591763B94B898D652335382E /* Pods-WunderApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WunderApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WunderApp/Pods-WunderApp.debug.xcconfig"; sourceTree = "<group>"; };
+		8BB8D4BCE2A6F5A897F50AA7 /* Pods-WunderAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WunderAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WunderAppTests/Pods-WunderAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BF1B8291647F770C3CF28550 /* Pods-WunderApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WunderApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-WunderApp/Pods-WunderApp.release.xcconfig"; sourceTree = "<group>"; };
+		D59A87AC2162AB1100D537DD /* WunderApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WunderApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D59A87AF2162AB1100D537DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D59A87B62162AB1500D537DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D59A87B92162AB1500D537DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D59A87BB2162AB1500D537DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D59A87C02162AB1500D537DD /* WunderAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WunderAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D59A87C42162AB1500D537DD /* WunderAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WunderAppTests.swift; sourceTree = "<group>"; };
+		D59A87C62162AB1500D537DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D59A87CF2162AC2200D537DD /* CarTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarTableCell.swift; sourceTree = "<group>"; };
+		D59A87D02162AC2300D537DD /* CarAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarAnnotation.swift; sourceTree = "<group>"; };
+		D59A87D12162AC2300D537DD /* CarsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarsViewController.swift; sourceTree = "<group>"; };
+		D59A87D22162AC2300D537DD /* CarModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarModel.swift; sourceTree = "<group>"; };
+		D59A87D32162AC2300D537DD /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		D59A87DA2162ACCA00D537DD /* StringExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExt.swift; sourceTree = "<group>"; };
+		D59A87DB2162ACCA00D537DD /* ResponseExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseExt.swift; sourceTree = "<group>"; };
+		D59A87F82162AD1500D537DD /* TargetType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TargetType.swift; sourceTree = "<group>"; };
+		D59A87F92162AD1500D537DD /* Rest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rest.swift; sourceTree = "<group>"; };
+		D59A87FA2162AD1500D537DD /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		D59A87FB2162AD1500D537DD /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		D59A87FC2162AD1500D537DD /* CarsTarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarsTarget.swift; sourceTree = "<group>"; };
+		D59A88032162BA8900D537DD /* CarsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsViewModel.swift; sourceTree = "<group>"; };
+		D59A88052162BAFB00D537DD /* CarsViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsViewModelProtocol.swift; sourceTree = "<group>"; };
+		ECE53443C5F2CB54EA794F08 /* Pods_WunderApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WunderApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D59A87A92162AB1100D537DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7DC80186BAE1583C775335D3 /* Pods_WunderApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D59A87BD2162AB1500D537DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E803E5F5FF58BD2ECB70AD8E /* Pods_WunderAppTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6EBFAEE707C3860E763DB081 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ECE53443C5F2CB54EA794F08 /* Pods_WunderApp.framework */,
+				55B4C8F818C7A24D5CFE23E4 /* Pods_WunderAppTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7A23B5F1E3E1500BF7E06B10 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				591763B94B898D652335382E /* Pods-WunderApp.debug.xcconfig */,
+				BF1B8291647F770C3CF28550 /* Pods-WunderApp.release.xcconfig */,
+				8BB8D4BCE2A6F5A897F50AA7 /* Pods-WunderAppTests.debug.xcconfig */,
+				188419FA2814319B72F6F9B8 /* Pods-WunderAppTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D59A87A32162AB1100D537DD = {
+			isa = PBXGroup;
+			children = (
+				D59A87AE2162AB1100D537DD /* WunderApp */,
+				D59A87C32162AB1500D537DD /* WunderAppTests */,
+				D59A87AD2162AB1100D537DD /* Products */,
+				7A23B5F1E3E1500BF7E06B10 /* Pods */,
+				6EBFAEE707C3860E763DB081 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D59A87AD2162AB1100D537DD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D59A87AC2162AB1100D537DD /* WunderApp.app */,
+				D59A87C02162AB1500D537DD /* WunderAppTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D59A87AE2162AB1100D537DD /* WunderApp */ = {
+			isa = PBXGroup;
+			children = (
+				D59A87AF2162AB1100D537DD /* AppDelegate.swift */,
+				D59A87F62162AD1500D537DD /* Network */,
+				D59A87D92162ACCA00D537DD /* Extensions */,
+				D59A880B2162CFA800D537DD /* CarsScene */,
+				D59A88092162CF8E00D537DD /* Storyboards */,
+				D59A880A2162CF9E00D537DD /* Resources */,
+				D59A87BB2162AB1500D537DD /* Info.plist */,
+			);
+			path = WunderApp;
+			sourceTree = "<group>";
+		};
+		D59A87C32162AB1500D537DD /* WunderAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				D59A87C42162AB1500D537DD /* WunderAppTests.swift */,
+				D59A87C62162AB1500D537DD /* Info.plist */,
+			);
+			path = WunderAppTests;
+			sourceTree = "<group>";
+		};
+		D59A87D92162ACCA00D537DD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D59A87DA2162ACCA00D537DD /* StringExt.swift */,
+				D59A87DB2162ACCA00D537DD /* ResponseExt.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D59A87F62162AD1500D537DD /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				D59A87FA2162AD1500D537DD /* Config.swift */,
+				D59A87F92162AD1500D537DD /* Rest.swift */,
+				D59A87FB2162AD1500D537DD /* Router.swift */,
+				D59A87F82162AD1500D537DD /* TargetType.swift */,
+				D59A87FC2162AD1500D537DD /* CarsTarget.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		D59A88072162CF6200D537DD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D59A87D22162AC2300D537DD /* CarModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D59A88082162CF7500D537DD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D59A87CF2162AC2200D537DD /* CarTableCell.swift */,
+				D59A87D02162AC2300D537DD /* CarAnnotation.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D59A88092162CF8E00D537DD /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				D59A87D32162AC2300D537DD /* Main.storyboard */,
+				D59A87B82162AB1500D537DD /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		D59A880A2162CF9E00D537DD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D59A87B62162AB1500D537DD /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D59A880B2162CFA800D537DD /* CarsScene */ = {
+			isa = PBXGroup;
+			children = (
+				D59A88082162CF7500D537DD /* Views */,
+				D59A88072162CF6200D537DD /* Models */,
+				D59A88052162BAFB00D537DD /* CarsViewModelProtocol.swift */,
+				D59A88032162BA8900D537DD /* CarsViewModel.swift */,
+				D59A87D12162AC2300D537DD /* CarsViewController.swift */,
+			);
+			path = CarsScene;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D59A87AB2162AB1100D537DD /* WunderApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D59A87C92162AB1500D537DD /* Build configuration list for PBXNativeTarget "WunderApp" */;
+			buildPhases = (
+				11365C7ADA338DBB3C965615 /* [CP] Check Pods Manifest.lock */,
+				D59A87A82162AB1100D537DD /* Sources */,
+				D59A87A92162AB1100D537DD /* Frameworks */,
+				D59A87AA2162AB1100D537DD /* Resources */,
+				D535F27F5820FDB4BFAC64A9 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WunderApp;
+			productName = WunderApp;
+			productReference = D59A87AC2162AB1100D537DD /* WunderApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D59A87BF2162AB1500D537DD /* WunderAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D59A87CC2162AB1500D537DD /* Build configuration list for PBXNativeTarget "WunderAppTests" */;
+			buildPhases = (
+				9B18470CAAB8B25FF85CC7C7 /* [CP] Check Pods Manifest.lock */,
+				D59A87BC2162AB1500D537DD /* Sources */,
+				D59A87BD2162AB1500D537DD /* Frameworks */,
+				D59A87BE2162AB1500D537DD /* Resources */,
+				F43E3A5FCC51D64F85268F29 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D59A87C22162AB1500D537DD /* PBXTargetDependency */,
+			);
+			name = WunderAppTests;
+			productName = WunderAppTests;
+			productReference = D59A87C02162AB1500D537DD /* WunderAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D59A87A42162AB1100D537DD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = WunderApp;
+				TargetAttributes = {
+					D59A87AB2162AB1100D537DD = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					D59A87BF2162AB1500D537DD = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = D59A87AB2162AB1100D537DD;
+					};
+				};
+			};
+			buildConfigurationList = D59A87A72162AB1100D537DD /* Build configuration list for PBXProject "WunderApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D59A87A32162AB1100D537DD;
+			productRefGroup = D59A87AD2162AB1100D537DD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D59A87AB2162AB1100D537DD /* WunderApp */,
+				D59A87BF2162AB1500D537DD /* WunderAppTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D59A87AA2162AB1100D537DD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D59A87BA2162AB1500D537DD /* LaunchScreen.storyboard in Resources */,
+				D59A87B72162AB1500D537DD /* Assets.xcassets in Resources */,
+				D59A87D82162AC2300D537DD /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D59A87BE2162AB1500D537DD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		11365C7ADA338DBB3C965615 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WunderApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9B18470CAAB8B25FF85CC7C7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WunderAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D535F27F5820FDB4BFAC64A9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-WunderApp/Pods-WunderApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/HTTPStatusCodes/HTTPStatusCodes.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HTTPStatusCodes.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WunderApp/Pods-WunderApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F43E3A5FCC51D64F85268F29 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-WunderAppTests/Pods-WunderAppTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WunderAppTests/Pods-WunderAppTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D59A87A82162AB1100D537DD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D59A87FE2162AD1500D537DD /* TargetType.swift in Sources */,
+				D59A87B02162AB1100D537DD /* AppDelegate.swift in Sources */,
+				D59A88022162AD1500D537DD /* CarsTarget.swift in Sources */,
+				D59A87D72162AC2300D537DD /* CarModel.swift in Sources */,
+				D59A87E22162ACCA00D537DD /* StringExt.swift in Sources */,
+				D59A88042162BA8900D537DD /* CarsViewModel.swift in Sources */,
+				D59A88002162AD1500D537DD /* Config.swift in Sources */,
+				D59A88062162BAFB00D537DD /* CarsViewModelProtocol.swift in Sources */,
+				D59A87E32162ACCA00D537DD /* ResponseExt.swift in Sources */,
+				D59A87FF2162AD1500D537DD /* Rest.swift in Sources */,
+				D59A87D42162AC2300D537DD /* CarTableCell.swift in Sources */,
+				D59A87D52162AC2300D537DD /* CarAnnotation.swift in Sources */,
+				D59A87D62162AC2300D537DD /* CarsViewController.swift in Sources */,
+				D59A88012162AD1500D537DD /* Router.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D59A87BC2162AB1500D537DD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D59A87C52162AB1500D537DD /* WunderAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D59A87C22162AB1500D537DD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D59A87AB2162AB1100D537DD /* WunderApp */;
+			targetProxy = D59A87C12162AB1500D537DD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D59A87B82162AB1500D537DD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D59A87B92162AB1500D537DD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D59A87C72162AB1500D537DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D59A87C82162AB1500D537DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D59A87CA2162AB1500D537DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 591763B94B898D652335382E /* Pods-WunderApp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q8GF4EXWZ5;
+				INFOPLIST_FILE = WunderApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.WunderApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D59A87CB2162AB1500D537DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF1B8291647F770C3CF28550 /* Pods-WunderApp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q8GF4EXWZ5;
+				INFOPLIST_FILE = WunderApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.WunderApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D59A87CD2162AB1500D537DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8BB8D4BCE2A6F5A897F50AA7 /* Pods-WunderAppTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q8GF4EXWZ5;
+				INFOPLIST_FILE = WunderAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.WunderAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WunderApp.app/WunderApp";
+			};
+			name = Debug;
+		};
+		D59A87CE2162AB1500D537DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 188419FA2814319B72F6F9B8 /* Pods-WunderAppTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q8GF4EXWZ5;
+				INFOPLIST_FILE = WunderAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.WunderAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WunderApp.app/WunderApp";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D59A87A72162AB1100D537DD /* Build configuration list for PBXProject "WunderApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D59A87C72162AB1500D537DD /* Debug */,
+				D59A87C82162AB1500D537DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D59A87C92162AB1500D537DD /* Build configuration list for PBXNativeTarget "WunderApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D59A87CA2162AB1500D537DD /* Debug */,
+				D59A87CB2162AB1500D537DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D59A87CC2162AB1500D537DD /* Build configuration list for PBXNativeTarget "WunderAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D59A87CD2162AB1500D537DD /* Debug */,
+				D59A87CE2162AB1500D537DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D59A87A42162AB1100D537DD /* Project object */;
+}
