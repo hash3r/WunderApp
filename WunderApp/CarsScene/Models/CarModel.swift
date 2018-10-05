@@ -49,14 +49,12 @@ struct CarModel: Mappable {
     
     func descriptionText() -> String {
         var text = ""
-//        if let trans = transmission {
-//            let type = TransmissionType(type: trans)
-//            text += "Transmission: " + type.rawValue
-//        }
-//        if let fuel = fuelType {
-//            let type = FuelType(type: fuel)
-//            text += (text.characters.count > 0 ? ". " : "") + "Fuel type: " + type.rawValue
-//        }
+        if let address = address {
+            text += "Address: " + address + "\n"
+        }
+        if let fuel = fuel {
+            text += "Fuel level: \(fuel)%"
+        }
         return text
     }
     

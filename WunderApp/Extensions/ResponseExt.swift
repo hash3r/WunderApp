@@ -2,7 +2,7 @@
 //  ResponseExt.swift
 //  WunderApp
 //
-//  Created by Vladimir Gnatiuk on 10/1/18.
+//  Created by Volodymyr Gnatiuk on 05.10.18.
 //  Copyright © 2018 WunderApp. All rights reserved.
 //
 

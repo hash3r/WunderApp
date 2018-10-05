@@ -8,19 +8,18 @@ inhibit_all_warnings!
 
 
 def common_pods
-    
+    pod 'PromiseKit', '6.4.0'
+    pod 'SwiftyJSON', '4.1.0'
 end
 
 target "WunderApp" do
     
-    common_pods
-
-    pod 'PromiseKit', '6.4.0'
+    common_pods    
     
     #Network layer
     pod 'Alamofire', '4.7.3'
     pod 'AlamofireObjectMapper', '5.1.0'
-    pod 'SwiftyJSON', '4.1.0'
+    
     pod 'HTTPStatusCodes', '3.2.0'
     
 end
@@ -29,6 +28,7 @@ target "WunderAppTests" do
     common_pods
     pod 'Quick', '1.3.1'
     pod 'Nimble', '7.1.3'
+    
 end
 
 post_install do |installer|

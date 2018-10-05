@@ -2,7 +2,7 @@
 //  CarsViewController.swift
 //  WunderApp
 //
-//  Created by Vladimir Gnatiuk on 10/1/18.
+//  Created by Volodymyr Gnatiuk on 05.10.18.
 //  Copyright © 2018 WunderApp. All rights reserved.
 //
 
@@ -17,9 +17,10 @@ enum ViewType: Int {
 
 class CarsViewController: UIViewController {
     
-    @IBOutlet weak var segmentControl: UISegmentedControl!
-    @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet internal weak var segmentControl: UISegmentedControl!
+    @IBOutlet internal weak var tableView: UITableView!
+    @IBOutlet internal weak var mapView: MKMapView!
+    @IBOutlet internal weak var errorLabel: UILabel!
     
     var viewModel: CarsViewModelProtocol = CarsViewModel()
     
@@ -44,14 +45,16 @@ class CarsViewController: UIViewController {
     }
     
     internal func updateUI(_ error: Error? = nil) {
-        if let _ = error {
-            //handle error
+        if let error = error as? NetworkError {
+            errorLabel.isHidden = false
+            errorLabel.text = error.description()
             tableView.isHidden = true
             mapView.removeAnnotations(mapView.annotations)
+            mapView.isHidden = true
         } else {
+            errorLabel.isHidden = true
             tableView.isHidden = false
             tableView.reloadData()
-            
             reloadAnnotations()
         }
     }
@@ -106,12 +109,11 @@ extension CarsViewController: MKMapViewDelegate {
             annotationView?.annotation = annotation
         }
         
-        let placeholder = UIImage(named: "car_template") ?? UIImage()
-        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 120, height: 80))
-        imageView.contentMode = .scaleAspectFit
-        imageView.image = placeholder
-        
-        annotationView?.detailCalloutAccessoryView = imageView
+//        let placeholder = UIImage(named: "car_template") ?? UIImage()
+//        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 120, height: 80))
+//        imageView.contentMode = .scaleAspectFit
+//        imageView.image = placeholder
+//        annotationView?.detailCalloutAccessoryView = imageView
         return annotationView
     }
     

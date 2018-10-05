@@ -2,7 +2,7 @@
 //  CarsViewModelProtocol.swift
 //  WunderApp
 //
-//  Created by Vladimir Gnatiuk on 10/1/18.
+//  Created by Volodymyr Gnatiuk on 05.10.18.
 //  Copyright © 2018 WunderApp. All rights reserved.
 //
 
@@ -20,4 +20,9 @@ protocol CarsViewModelProtocol {
     ///
     /// - Returns: promise with a suggestion to update UI
     func loadData() -> Promise<Bool>
+    
+    /// Method for getting datasource
+    ///
+    /// - Returns: endpoint for request
+    func target() -> TargetType
 }

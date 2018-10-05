@@ -2,7 +2,7 @@
 //  CarTableCell.swift
 //  WunderApp
 //
-//  Created by Vladimir Gnatiuk on 10/1/18.
+//  Created by Volodymyr Gnatiuk on 05.10.18.
 //  Copyright © 2018 WunderApp. All rights reserved.
 //
 
@@ -12,10 +12,10 @@ class CarTableCell: UITableViewCell {
     
     static let Key = "CarTableCell"
     
-    @IBOutlet weak var carImageView: UIImageView!
-    @IBOutlet weak var modelLabel: UILabel!
-    @IBOutlet weak var descriptionLabel: UILabel!
-    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet private weak var carImageView: UIImageView!
+    @IBOutlet private weak var modelLabel: UILabel!
+    @IBOutlet private weak var descriptionLabel: UILabel!
+    @IBOutlet private weak var nameLabel: UILabel!
     
     var carModel: CarModel? {
         didSet {

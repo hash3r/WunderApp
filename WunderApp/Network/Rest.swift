@@ -2,7 +2,7 @@
 //  Rest.swift
 //  WunderApp
 //
-//  Created by Vladimir Gnatiuk on 10/1/18.
+//  Created by Volodymyr Gnatiuk on 05.10.18.
 //  Copyright © 2018 WunderApp. All rights reserved.
 //
 
@@ -30,24 +30,33 @@ open class Rest {
     func arrayMappableRequest<T: BaseMappable>(_ target: TargetType, queue: DispatchQueue? = .global(), keyPath: String? = nil) -> Promise<[T]> {
         
         return Promise<[T]> { seal in
-            let router = Router(target)
-            let request = manager.request(router)
-            request.responseArray(queue: queue, keyPath: keyPath) { (response: DataResponse<[T]>) -> Void in
-//                debugPrint(response.fullDescription)
-                if let value = response.result.value, response.isSuccess() {
-                    seal.fulfill(value)
+            
+            func handleParsedResponse(_ value: [T]) {
+                if value.isEmpty {
+                    seal.reject(NetworkError.noData)
                 } else {
-                    if let error = response.result.error {
+                    seal.fulfill(value)
+                }
+            }
+            
+            if let json = target.stubData()?.arrayObject,
+                let parsedObject = Mapper<T>().mapArray(JSONObject: json) {
+                handleParsedResponse(parsedObject)
+            } else {
+                let router = Router(target)
+                let request = manager.request(router)
+                request.responseArray(queue: queue, keyPath: keyPath) { (response: DataResponse<[T]>) -> Void in
+    //                debugPrint(response.fullDescription)
+                    if let value = response.result.value, response.isSuccess() {
+                        handleParsedResponse(value)
+                    } else if let error = response.result.error {
                         seal.reject(error)
                     } else {
-                        seal.reject(self.defaultRestErrorWith(response.response?.statusCode))
+                        seal.reject(NetworkError.defaultError)
                     }
                 }
             }
         }
     }
     
-    fileprivate func defaultRestErrorWith(_ code: Int?) -> NSError {
-        return NSError(domain: Bundle.main.bundleIdentifier!, code: code ?? 0, userInfo: [NSLocalizedDescriptionKey: "See response above"])
-    }
 }

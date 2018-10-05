@@ -2,11 +2,12 @@
 //  TargetType.swift
 //  WunderApp
 //
-//  Created by Vladimir Gnatiuk on 10/1/18.
+//  Created by Volodymyr Gnatiuk on 05.10.18.
 //  Copyright © 2018 WunderApp. All rights reserved.
 //
 
 import Alamofire
+import SwiftyJSON
 
 public typealias PathType = String
 public typealias ParametersType = Any
@@ -19,6 +20,7 @@ public protocol TargetType {
     func method() -> Alamofire.HTTPMethod
     func params() -> ParametersType?
     func headers() -> HTTPHeaders
+    func stubData() -> JSON?
 }
 
 /// implement default behaviour
@@ -26,6 +28,10 @@ extension TargetType {
     
     func baseUrl() -> PathType {
         return Config.Server.BaseUrl + Config.Server.ApiVersion
+    }
+    
+    func path() -> PathType {
+        return ""
     }
     
     func params() -> ParametersType? {
@@ -39,4 +45,10 @@ extension TargetType {
     func method() -> Alamofire.HTTPMethod {
         return .get
     }
+    
+    func stubData() -> JSON? {
+        return nil
+    }
+    
 }
+

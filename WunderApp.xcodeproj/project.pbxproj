@@ -11,7 +11,7 @@
 		D59A87B02162AB1100D537DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59A87AF2162AB1100D537DD /* AppDelegate.swift */; };
 		D59A87B72162AB1500D537DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D59A87B62162AB1500D537DD /* Assets.xcassets */; };
 		D59A87BA2162AB1500D537DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D59A87B82162AB1500D537DD /* LaunchScreen.storyboard */; };
-		D59A87C52162AB1500D537DD /* WunderAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59A87C42162AB1500D537DD /* WunderAppTests.swift */; };
+		D59A87C52162AB1500D537DD /* CarViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59A87C42162AB1500D537DD /* CarViewControllerSpec.swift */; };
 		D59A87D42162AC2300D537DD /* CarTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59A87CF2162AC2200D537DD /* CarTableCell.swift */; };
 		D59A87D52162AC2300D537DD /* CarAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59A87D02162AC2300D537DD /* CarAnnotation.swift */; };
 		D59A87D62162AC2300D537DD /* CarsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59A87D12162AC2300D537DD /* CarsViewController.swift */; };
@@ -26,6 +26,13 @@
 		D59A88022162AD1500D537DD /* CarsTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59A87FC2162AD1500D537DD /* CarsTarget.swift */; };
 		D59A88042162BA8900D537DD /* CarsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59A88032162BA8900D537DD /* CarsViewModel.swift */; };
 		D59A88062162BAFB00D537DD /* CarsViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59A88052162BAFB00D537DD /* CarsViewModelProtocol.swift */; };
+		D5DEF90F216765E200C57324 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DEF90E216765E200C57324 /* NetworkError.swift */; };
+		D5DEF9112167690400C57324 /* empty_locations.json in Resources */ = {isa = PBXBuildFile; fileRef = D5DEF9102167690300C57324 /* empty_locations.json */; };
+		D5DEF91421676C2000C57324 /* MockCarsTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DEF91321676C2000C57324 /* MockCarsTarget.swift */; };
+		D5DEF9162167911600C57324 /* MockCarsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DEF9152167911600C57324 /* MockCarsViewModel.swift */; };
+		D5DEF9182167964300C57324 /* partial_locations.json in Resources */ = {isa = PBXBuildFile; fileRef = D5DEF9172167964300C57324 /* partial_locations.json */; };
+		D5DEF91A216797B700C57324 /* SwiftyJSONExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DEF919216797B700C57324 /* SwiftyJSONExt.swift */; };
+		D5DEF91C2167C0B000C57324 /* valid_locations.json in Resources */ = {isa = PBXBuildFile; fileRef = D5DEF91B2167C0B000C57324 /* valid_locations.json */; };
 		E803E5F5FF58BD2ECB70AD8E /* Pods_WunderAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55B4C8F818C7A24D5CFE23E4 /* Pods_WunderAppTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,7 +58,7 @@
 		D59A87B92162AB1500D537DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D59A87BB2162AB1500D537DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D59A87C02162AB1500D537DD /* WunderAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WunderAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D59A87C42162AB1500D537DD /* WunderAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WunderAppTests.swift; sourceTree = "<group>"; };
+		D59A87C42162AB1500D537DD /* CarViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarViewControllerSpec.swift; sourceTree = "<group>"; };
 		D59A87C62162AB1500D537DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D59A87CF2162AC2200D537DD /* CarTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarTableCell.swift; sourceTree = "<group>"; };
 		D59A87D02162AC2300D537DD /* CarAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarAnnotation.swift; sourceTree = "<group>"; };
@@ -67,6 +74,13 @@
 		D59A87FC2162AD1500D537DD /* CarsTarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarsTarget.swift; sourceTree = "<group>"; };
 		D59A88032162BA8900D537DD /* CarsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsViewModel.swift; sourceTree = "<group>"; };
 		D59A88052162BAFB00D537DD /* CarsViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsViewModelProtocol.swift; sourceTree = "<group>"; };
+		D5DEF90E216765E200C57324 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		D5DEF9102167690300C57324 /* empty_locations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = empty_locations.json; sourceTree = "<group>"; };
+		D5DEF91321676C2000C57324 /* MockCarsTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCarsTarget.swift; sourceTree = "<group>"; };
+		D5DEF9152167911600C57324 /* MockCarsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCarsViewModel.swift; sourceTree = "<group>"; };
+		D5DEF9172167964300C57324 /* partial_locations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = partial_locations.json; sourceTree = "<group>"; };
+		D5DEF919216797B700C57324 /* SwiftyJSONExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyJSONExt.swift; sourceTree = "<group>"; };
+		D5DEF91B2167C0B000C57324 /* valid_locations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = valid_locations.json; sourceTree = "<group>"; };
 		ECE53443C5F2CB54EA794F08 /* Pods_WunderApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WunderApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -147,7 +161,10 @@
 		D59A87C32162AB1500D537DD /* WunderAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				D59A87C42162AB1500D537DD /* WunderAppTests.swift */,
+				D59A87C42162AB1500D537DD /* CarViewControllerSpec.swift */,
+				D5DEF9152167911600C57324 /* MockCarsViewModel.swift */,
+				D5DEF91321676C2000C57324 /* MockCarsTarget.swift */,
+				D5DEF9122167690800C57324 /* Resources */,
 				D59A87C62162AB1500D537DD /* Info.plist */,
 			);
 			path = WunderAppTests;
@@ -158,6 +175,7 @@
 			children = (
 				D59A87DA2162ACCA00D537DD /* StringExt.swift */,
 				D59A87DB2162ACCA00D537DD /* ResponseExt.swift */,
+				D5DEF919216797B700C57324 /* SwiftyJSONExt.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -168,6 +186,7 @@
 				D59A87FA2162AD1500D537DD /* Config.swift */,
 				D59A87F92162AD1500D537DD /* Rest.swift */,
 				D59A87FB2162AD1500D537DD /* Router.swift */,
+				D5DEF90E216765E200C57324 /* NetworkError.swift */,
 				D59A87F82162AD1500D537DD /* TargetType.swift */,
 				D59A87FC2162AD1500D537DD /* CarsTarget.swift */,
 			);
@@ -218,6 +237,16 @@
 				D59A87D12162AC2300D537DD /* CarsViewController.swift */,
 			);
 			path = CarsScene;
+			sourceTree = "<group>";
+		};
+		D5DEF9122167690800C57324 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D5DEF9172167964300C57324 /* partial_locations.json */,
+				D5DEF9102167690300C57324 /* empty_locations.json */,
+				D5DEF91B2167C0B000C57324 /* valid_locations.json */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -315,6 +344,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5DEF9182167964300C57324 /* partial_locations.json in Resources */,
+				D5DEF9112167690400C57324 /* empty_locations.json in Resources */,
+				D5DEF91C2167C0B000C57324 /* valid_locations.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,11 +424,15 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-WunderAppTests/Pods-WunderAppTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
 				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
 			);
@@ -421,11 +457,13 @@
 				D59A88002162AD1500D537DD /* Config.swift in Sources */,
 				D59A88062162BAFB00D537DD /* CarsViewModelProtocol.swift in Sources */,
 				D59A87E32162ACCA00D537DD /* ResponseExt.swift in Sources */,
+				D5DEF90F216765E200C57324 /* NetworkError.swift in Sources */,
 				D59A87FF2162AD1500D537DD /* Rest.swift in Sources */,
 				D59A87D42162AC2300D537DD /* CarTableCell.swift in Sources */,
 				D59A87D52162AC2300D537DD /* CarAnnotation.swift in Sources */,
 				D59A87D62162AC2300D537DD /* CarsViewController.swift in Sources */,
 				D59A88012162AD1500D537DD /* Router.swift in Sources */,
+				D5DEF91A216797B700C57324 /* SwiftyJSONExt.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,7 +471,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D59A87C52162AB1500D537DD /* WunderAppTests.swift in Sources */,
+				D59A87C52162AB1500D537DD /* CarViewControllerSpec.swift in Sources */,
+				D5DEF91421676C2000C57324 /* MockCarsTarget.swift in Sources */,
+				D5DEF9162167911600C57324 /* MockCarsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

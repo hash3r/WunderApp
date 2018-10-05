@@ -1,0 +1,47 @@
+[
+    {
+        "coordinates": [
+            10.07526,
+            53.59301,
+            0
+        ],
+        "name": "HH-GO8522",
+        "vin": "WME4513341K565439"
+    },
+    {
+        "address": "Grosse Reichenstraße 7, 20457 Hamburg",
+        "interior": "GOOD",
+        "name": "HH-GO8480",
+        "vin": "WME4513341K412697"
+    },
+    {
+        "address": "Spreenende 1 - 11, 22453 Hamburg (Umkreis 100m)"
+    },
+    {
+        "coordinates": [
+            10.07838,
+            53.56388,
+            0
+        ]
+    },
+    {
+        "engineType": "CE",
+        "exterior": "GOOD",
+        "fuel": 54,
+        "vin": "WME4513341K412721"
+    },
+    {
+        "address": "Am Alten Posthaus 6, 22041 Hamburg",
+        "coordinates": [
+            10.07107,
+            53.5708,
+            0
+        ],
+        "engineType": "CE",
+        "exterior": "GOOD",
+        "fuel": 57,
+        "interior": "GOOD",
+        "name": "HH-GO8004",
+        "vin": "WME4513341K412727"
+    }
+]

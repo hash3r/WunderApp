@@ -2,7 +2,7 @@
 //  CarsViewModel.swift
 //  WunderApp
 //
-//  Created by Vladimir Gnatiuk on 10/1/18.
+//  Created by Volodymyr Gnatiuk on 05.10.18.
 //  Copyright © 2018 WunderApp. All rights reserved.
 //
 
@@ -14,6 +14,7 @@ class CarsViewModel: CarsViewModelProtocol {
     private(set) var cars = [CarModel]()
     private(set) var annotations = [CarAnnotation]()
     private(set) var isLoading = false
+    
     var selectedAnnotation: CarAnnotation?
     
     func loadData() -> Promise<Bool> {
@@ -22,14 +23,19 @@ class CarsViewModel: CarsViewModelProtocol {
         }
         self.isLoading = true
         
-        let target = CarsTarget.allCars
-        return Rest.shared.arrayMappableRequest(target, keyPath: "placemarks")
+        return Rest.shared.arrayMappableRequest(target(), keyPath: "placemarks")
             .map(on: DispatchQueue.global(), { (cars: [CarModel]) -> Bool in
             self.cars = cars
-            self.annotations = self.cars.map { CarAnnotation(model:$0) }
+            self.annotations = self.cars
+                .filter { $0.locationCoordinate() != nil }
+                .map { CarAnnotation(model:$0) }
             return cars.count > 0
         }).ensure {
             self.isLoading = false
         }
+    }
+    
+    internal func target() -> TargetType {
+        return CarsTarget.allCars
     }
 }

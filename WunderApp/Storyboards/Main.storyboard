@@ -22,12 +22,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hxn-Tj-rJj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-466" y="272"/>
+            <point key="canvasLocation" x="-359" y="270"/>
         </scene>
         <!--Cars View Controller-->
         <scene sceneID="0Q7-OR-wZy">
             <objects>
-                <viewController storyboardIdentifier="MainViewController" id="vlX-ZP-cUB" customClass="CarsViewController" customModule="WunderApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CarsViewController" id="vlX-ZP-cUB" customClass="CarsViewController" customModule="WunderApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="heT-nj-gA6"/>
                         <viewControllerLayoutGuide type="bottom" id="DMF-S8-Rdh"/>
@@ -36,6 +36,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="No results found" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l3D-NL-QWU">
+                                <rect key="frame" x="116.5" y="321.5" width="142.5" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="1Le-An-J7c">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <connections>
@@ -46,7 +52,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CarTableCell" rowHeight="196" id="B6f-dl-5v3" customClass="CarTableCell" customModule="WunderApp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CarTableCell" rowHeight="196" id="B6f-dl-5v3" customClass="CarTableCell" customModule="WunderApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="196"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="B6f-dl-5v3" id="3Op-zy-VT4">
@@ -114,9 +120,11 @@
                             <constraint firstItem="gHd-TD-6qz" firstAttribute="top" secondItem="heT-nj-gA6" secondAttribute="bottom" id="7PS-DB-hAX"/>
                             <constraint firstAttribute="bottom" secondItem="1Le-An-J7c" secondAttribute="bottom" id="Hqz-Ww-XkE"/>
                             <constraint firstAttribute="trailing" secondItem="1Le-An-J7c" secondAttribute="trailing" id="LdM-k1-x5j"/>
+                            <constraint firstItem="l3D-NL-QWU" firstAttribute="centerX" secondItem="bF2-6i-Ovb" secondAttribute="centerX" id="Obj-3t-4UF"/>
                             <constraint firstItem="1Le-An-J7c" firstAttribute="leading" secondItem="bF2-6i-Ovb" secondAttribute="leading" id="Pck-kr-833"/>
                             <constraint firstItem="gHd-TD-6qz" firstAttribute="leading" secondItem="bF2-6i-Ovb" secondAttribute="leading" id="Pez-kB-9vX"/>
-                            <constraint firstItem="DMF-S8-Rdh" firstAttribute="top" secondItem="gHd-TD-6qz" secondAttribute="bottom" id="j0f-19-8tj"/>
+                            <constraint firstItem="l3D-NL-QWU" firstAttribute="centerY" secondItem="bF2-6i-Ovb" secondAttribute="centerY" id="Wfn-wo-dc0"/>
+                            <constraint firstAttribute="bottom" secondItem="gHd-TD-6qz" secondAttribute="bottom" id="j0f-19-8tj"/>
                             <constraint firstAttribute="trailing" secondItem="gHd-TD-6qz" secondAttribute="trailing" id="kky-rk-l54"/>
                         </constraints>
                     </view>
@@ -135,6 +143,7 @@
                         </segmentedControl>
                     </navigationItem>
                     <connections>
+                        <outlet property="errorLabel" destination="l3D-NL-QWU" id="hW7-tM-IOE"/>
                         <outlet property="mapView" destination="1Le-An-J7c" id="Voj-vt-cby"/>
                         <outlet property="segmentControl" destination="i5t-0z-qdO" id="DKg-y3-vQg"/>
                         <outlet property="tableView" destination="gHd-TD-6qz" id="aQx-Un-hDT"/>
@@ -142,7 +151,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nSZ-Ta-BQf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="558" y="262"/>
+            <point key="canvasLocation" x="558" y="271"/>
         </scene>
     </scenes>
 </document>
